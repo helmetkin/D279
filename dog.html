@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dog Owners | Paradigm Pet Professionals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+         <a href="index.html" aria-label="Paradigm Pet Professionals Home">
+             <img src="./images/Logo2.png" alt="Paradigm Pet Professionals Logo" />
+             <img src="./images/Logo.png" alt="Paradigm Pet Professionals Logo">
+         </a>
+      <div class="tagline">Evidence-based pet care advice for every pet lover</div>
+    </div>
+  </header>
+  <nav class="navbar" aria-label="Primary Navigation">
+  <div class="nav-container">
+    <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li class="dropdown">
+        <a href="#" aria-haspopup="true" aria-expanded="false">Pets ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="dogs.html">Dogs</a></li>
+          <li><a href="cats.html">Cats</a></li>
+          <li><a href="fish.html">Fish</a></li>
+        </ul>
+      </li>
+      <li><a href="consultation.html">Consultation</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+  <main>
+    <section class="hero" aria-label="Dog Owners">
+      <img src="./images/dog2.png" alt="Happy dogs" />
+      <h1>Dog Owners</h1>
+      <p>
+        The domestic dog is an extremely social animal and offers a diverse variety of choices as there are well over 300 breeds recognized by the World Canine Organization. Adopting a dog offers mutual benefits between dog and owner. Many studies cite the social benefits of having a companion as well as the reduced feelings of loneliness from adopting a dog. Studies even show medical indicators such as reduced blood pressure and improved lipid profiles.
+      </p>
+    </section>
+    <section class="content-section">
+      <h2>Diet & Exercise</h2>
+      <p>
+        Throughout dogs’ lifespans, they should generally be fed fewer meals as they mature. Puppies should be nursed the first two months, then introduced to three meals per day when they are about three to six months years old. Their food intake should be reduced to two meals per day when they are six months to one year old and finally reduced to one meal after they reach one year old.
+      </p>
+      <p>
+        A dog’s typical body mass is composed of somewhere between 60 and 70 percent water. The ASPCA says just a 10 percent decrease in body water can cause illness, and a 15 percent loss can cause death, so make sure you keep your pooch hydrated!
+      </p>
+      <p>
+        Much like humans, dogs need to have a healthy level of activity to keep their organs healthy, as well as sun and fresh air. The minimum recommended time for exercise varies greatly with breed and size differences, but generally a range of 30–120 minutes of exercise is recommended per day! You can also choose from a variety of toys to encourage physical activity; just be sure they are age appropriate and do not pose a choking hazard.
+      </p>
+      <h2>Grooming & Handling</h2>
+      <p>
+        <img src="./images/dog1.png" alt="dog with stick">
+        Keeping your furry family member clean is important to its health. So be sure to brush frequently to reduce the amount of shedding and prevent matted and tangled fur that can prove to be extremely difficult to remove. Check for insects such as ticks and fleas, especially after visiting heavily wooded areas. Bathing is not only important to your dog’s health but can be an exercise depending on how strong willed the dog is. Rinse all of the soap out, as any residual soap can result in a rash. Be sure the soap is formulated for your puppy or dog, since harsh soaps can cause allergic reactions.
+      </p>
+      <h2>Vaccinations & Medications</h2>
+      <p>
+        You should always consult with your veterinarian, but there is a core set of vaccines that are typically recommended. Vaccines that reduce the exposure risk to things such as hepatitis, rabies, and parvovirus. Others may be determined by your vet depending on the environment in which the dog resides.
+      </p>
+    </section>
+  </main>
+  <footer>
+     <div class="logo">
+       <a href="index.html" aria-label="Paradigm Pet Professionals Home"> <img src="./images/Logo2.png" alt="Paradigm Pet Professionals Logo" />
+        </a>
+    </div>
+    &copy; 2025 Paradigm Pet Professionals. All rights reserved.<br />
+    Contact: info@paradigmpetpros.com | (555) 123-4567
+  </footer>
+  <script>
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+  hamburger.addEventListener('click', function() {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+    hamburger.setAttribute('aria-expanded', !expanded);
+    navMenu.classList.toggle('active');
+  });
+  
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', false);
+    });
+  });
+</script>
+
+</body>
+</html>

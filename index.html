@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paradigm Pet Professionals</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <a href="index.html" aria-label="Paradigm Pet Professionals Home">
+             <img src="./images/Logo2.png" alt="Paradigm Pet Professionals Logo" />
+             <img src="./images/Logo.png" alt="Paradigm Pet Professionals Logo">
+         </a>
+      <div class="tagline">Evidence-based pet care advice for every pet lover</div>
+    </div>
+  </header>
+ <nav class="navbar" aria-label="Primary Navigation">
+  <div class="nav-container">
+    <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li class="dropdown">
+        <a href="#" aria-haspopup="true" aria-expanded="false">Pets ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="dogs.html">Dogs</a></li>
+          <li><a href="cats.html">Cats</a></li>
+          <li><a href="fish.html">Fish</a></li>
+        </ul>
+      </li>
+      <li><a href="consultation.html">Consultation</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+  <main>
+    <section class="hero" aria-label="Introduction">
+      <img src="./images/dog1.png" alt="dog with stick" />
+      <img src="./images/cat1.png" alt="Kitten">
+      <img src="./images/fish1.png" alt="fish in tank">
+      <div class="hero-logo">
+        <img src="./images/logo.png" alt="logo"/>
+      </div>
+      <h1>Welcome to Paradigm Pet Professionals
+        
+      </h1>
+      <p>
+        Pets are nature's gift to humanity. It has been scientifically proven that opening our homes and hearts to a pet increases our longevity and improves our overall quality of life as well as the lives of our pets. At Paradigm Pet Professionals, our mission is to offer resources to help you care for your furry, scaly, feathery, and slimy loved ones.
+      </p>
+      <a href="consultation.html" class="btn-primary">Request a Consultation</a>
+    </section>
+
+    <section class="quick-links" aria-label="Pet Owner Resources">
+      <a href="dog.html">Dog Owners</a>
+      <a href="cat.html">Cat Owners</a>
+      <a href="fish.html">Fish Owners</a>
+    </section>
+
+    <section class="content-section" aria-label="Our Services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Virtual consultations and presentations</li>
+        <li>One-on-one consultations concerning individual pets</li>
+        <li>Group presentations regarding general pet care (tailored to group needs)</li>
+      </ul>
+    </section>
+
+    <section class="content-section" aria-label="Adoption Resources">
+      <h2>Looking for your new best friend?</h2>
+      <ul>
+        <li><a href="https://theshelterpetproject.org/" target="_blank" rel="noopener noreferrer">General Adoption Resources</a></li>
+        <li><a href="https://www.aspca.org/" target="_blank" rel="noopener noreferrer">ASPCA</a></li>
+        <li><a href="https://www.sterlingshelter.org/humane-society/koi-fish-rescue/" target="_blank" rel="noopener noreferrer">Fish Rescue</a></li>
+        <li><a href="https://savethesnakes.org/snakerescuecall/" target="_blank" rel="noopener noreferrer">Snake Rescue</a></li>
+        <li><a href="https://ftlob.rescuegroups.org/" target="_blank" rel="noopener noreferrer">Bird Rescue</a></li>
+      </ul>
+      <p>
+        We are happy to help you navigate the adoption process! Please fill out our contact form to request a consultation. We will contact you within 48 hours to schedule a consultation. All fields are required.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+     <div class="logo">
+        <a href="index.html" aria-label="Paradigm Pet Professionals Home"> <img src="./images/Logo2.png" alt="Paradigm Pet Professionals Logo" />
+        </a>
+    </div>
+    &copy; 2025 Paradigm Pet Professionals. All rights reserved.<br />
+    Contact: info@paradigmpetpros.com | (555) 123-4567
+  </footer>
+    <script>
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+  hamburger.addEventListener('click', function() {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+    hamburger.setAttribute('aria-expanded', !expanded);
+    navMenu.classList.toggle('active');
+  });
+  
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', false);
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Consultation | Paradigm Pet Professionals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+         <a href="index.html" aria-label="Paradigm Pet Professionals Home">
+             <img src="./images/Logo2.png" alt="Paradigm Pet Professionals Logo" />
+             <img src="./images/Logo.png" alt="Paradigm Pet Professionals Logo">
+         </a>
+      <div class="tagline">Evidence-based pet care advice for every pet lover</div>
+    </div>
+  </header>
+  <nav class="navbar" aria-label="Primary Navigation">
+  <div class="nav-container">
+    <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li class="dropdown">
+        <a href="#" aria-haspopup="true" aria-expanded="false">Pets ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="dogs.html">Dogs</a></li>
+          <li><a href="cats.html">Cats</a></li>
+          <li><a href="fish.html">Fish</a></li>
+        </ul>
+      </li>
+      <li><a href="consultation.html">Consultation</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+  <main>
+    <section class="content-section">
+      <h1>Request a Consultation</h1>
+      <p>
+        We offer virtual consultations, one-on-one support, and group presentations. Please fill out the form below to request a consultation. We will contact you within 48 hours to schedule your appointment.
+      </p>
+      <form style="max-width:500px;margin:auto;">
+        <label for="name">Name:</label><br/>
+        <input type="text" id="name" name="name" required style="width:100%;padding:8px;margin-bottom:10px;"><br/>
+        <label for="email">Email Address:</label><br/>
+        <input type="email" id="email" name="email" required style="width:100%;padding:8px;margin-bottom:10px;"><br/>
+        <label for="pettype">Pet Type:</label><br/>
+        <input type="text" id="pettype" name="pettype" required style="width:100%;padding:8px;margin-bottom:10px;"><br/>
+        <label for="petname">Pet’s Name:</label><br/>
+        <input type="text" id="petname" name="petname" required style="width:100%;padding:8px;margin-bottom:10px;"><br/>
+        <label for="age">Age:</label><br/>
+        <input type="text" id="age" name="age" required style="width:100%;padding:8px;margin-bottom:10px;"><br/>
+        <label for="message">How can we help?</label><br/>
+        <textarea id="message" name="message" rows="4" required style="width:100%;padding:8px;margin-bottom:10px;"></textarea><br/>
+        <button type="submit" class="btn-primary">Submit</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+     <div class="logo">
+       <a href="index.html" aria-label="Paradigm Pet Professionals Home"> <img src="./images/Logo2.png" alt="Paradigm Pet Professionals Logo" />
+        </a>
+    </div>
+    &copy; 2025 Paradigm Pet Professionals. All rights reserved.<br />
+    Contact: info@paradigmpetpros.com | (555) 123-4567
+  </footer>
+  <script>
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+  hamburger.addEventListener('click', function() {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+    hamburger.setAttribute('aria-expanded', !expanded);
+    navMenu.classList.toggle('active');
+  });
+ 
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', false);
+    });
+  });
+</script>
+
+</body>
+</html>

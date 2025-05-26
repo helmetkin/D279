@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us | Paradigm Pet Professionals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Include the same header/nav as on the homepage -->
+  <header>
+    <div class="logo">
+         <a href="index.html" aria-label="Paradigm Pet Professionals Home">
+             <img src="./images/Logo2.png" alt="Paradigm Pet Professionals Logo" />
+             <img src="./images/Logo.png" alt="Paradigm Pet Professionals Logo">
+         </a>
+      <div class="tagline">Evidence-based pet care advice for every pet lover</div>
+    </div>
+  </header>
+  <nav class="navbar" aria-label="Primary Navigation">
+  <div class="nav-container">
+    <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li class="dropdown">
+        <a href="#" aria-haspopup="true" aria-expanded="false">Pets ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="dogs.html">Dogs</a></li>
+          <li><a href="cats.html">Cats</a></li>
+          <li><a href="fish.html">Fish</a></li>
+        </ul>
+      </li>
+      <li><a href="consultation.html">Consultation</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+  <main>
+    <section class="content-section">
+      <h1>About Paradigm Pet Professionals</h1>
+      <p>
+        Paradigm Pet Professionals has 12 years’ experience working with pet owners, certifications in pet health and nutrition, and customer recognition for outstanding support.
+      </p>
+      <p>
+        Our mission is to offer evidence-based pet care resources and consultations for every pet lover. We provide virtual consultations, one-on-one support, and group presentations tailored to your needs.
+      </p>
+      <ul>
+        <li>Certified pet health and nutrition experts</li>
+        <li>Virtual and in-person consultations</li>
+        <li>Group presentations for organizations and communities</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+     <div class="logo">
+       <a href="index.html" aria-label="Paradigm Pet Professionals Home"> <img src="./images/Logo2.png" alt="Paradigm Pet Professionals Logo" />
+        </a>
+    </div>
+    &copy; 2025 Paradigm Pet Professionals. All rights reserved.<br />
+    Contact: info@paradigmpetpros.com | (555) 123-4567
+  </footer>
+  <script>
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+  hamburger.addEventListener('click', function() {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+    hamburger.setAttribute('aria-expanded', !expanded);
+    navMenu.classList.toggle('active');
+  });
+  
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', false);
+    });
+  });
+</script>
+
+</body>
+</html>
