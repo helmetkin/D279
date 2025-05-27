@@ -29,8 +29,8 @@
       <li class="dropdown">
         <a href="#" aria-haspopup="true" aria-expanded="false">Pets ▼</a>
         <ul class="dropdown-menu">
-          <li><a href="dogs.html">Dogs</a></li>
-          <li><a href="cats.html">Cats</a></li>
+          <li><a href="dog.html">Dogs</a></li>
+          <li><a href="cat.html">Cats</a></li>
           <li><a href="fish.html">Fish</a></li>
         </ul>
       </li>
@@ -46,17 +46,37 @@
         We offer virtual consultations, one-on-one support, and group presentations. Please fill out the form below to request a consultation. We will contact you within 48 hours to schedule your appointment.
       </p>
       <form style="max-width:500px;margin:auto;">
-        <label for="name">Name:</label><br/>
+        <label for="name">First Name:</label><br/>
         <input type="text" id="name" name="name" required style="width:100%;padding:8px;margin-bottom:10px;"><br/>
-        <label for="email">Email Address:</label><br/>
+        <label for="name">Last Name:</label><br/>
+        <input type="text" id="name" name="name" required style="width:100%;padding:8px;margin-bottom:10px;"><br/>
+        <label for="phone">Phone Number:</label><br/>
+        <input type="tel" id="phone" name="phone" required style="width:100%;padding:8px;margin-bottom:10px;"><br/>
+        <label for="email">Email:</label><br/>
         <input type="email" id="email" name="email" required style="width:100%;padding:8px;margin-bottom:10px;"><br/>
-        <label for="pettype">Pet Type:</label><br/>
-        <input type="text" id="pettype" name="pettype" required style="width:100%;padding:8px;margin-bottom:10px;"><br/>
+        <label for="email">Confirm Email:</label><br/>
+        <input type="email" id="email" name="email" required style="width:100%;padding:8px;margin-bottom:10px;"><br/>
+        <label for="timezone">Time Zone:</label><br/>
+        <select id="timezone" name="timezone" required style="width:100%;padding:8px;margin-bottom:10px;">
+         <option value=""> Please choose a time zone </option>
+         <option value="Pacific Time (PT)">Pacific Time (PT)</option>
+         <option value="Mountain Time (MT)">Mountain Time (MT)</option>
+         <option value="Central Time (CT)">Central Time (CT)</option>
+         <option value="Eastern Time (ET)">Eastern Time (ET)</option>
+        </select>
         <label for="petname">Pet’s Name:</label><br/>
         <input type="text" id="petname" name="petname" required style="width:100%;padding:8px;margin-bottom:10px;"><br/>
-        <label for="age">Age:</label><br/>
+        <label for="pettype">Pet Type:</label><br/>
+        <select id="pettype" name="pettype" required style="width:100%;padding:8px;margin-bottom:10px;">
+          <option value=""> Please choose a pet</option>
+          <option value="Dog">Dog</option>
+          <option value="Cat">Cat</option>
+          <option value="Fish">Fish</option>
+          <option value="Other">Other</option>
+        </select><br/>
+        <label for="age">Pet's Age:</label><br/>
         <input type="text" id="age" name="age" required style="width:100%;padding:8px;margin-bottom:10px;"><br/>
-        <label for="message">How can we help?</label><br/>
+        <label for="message">Message:</label><br/>
         <textarea id="message" name="message" rows="4" required style="width:100%;padding:8px;margin-bottom:10px;"></textarea><br/>
         <button type="submit" class="btn-primary">Submit</button>
       </form>
